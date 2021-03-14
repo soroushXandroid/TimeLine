@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="@drawable/upload_dialog_bg">
+
+
+    <TextView
+        android:id="@+id/tv_edit_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_dialog_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+
+    <EditText
+        android:id="@+id/et_edit_dialog"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_dialog"
+        app:layout_constraintVertical_bias="0.20"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="14sp"
+        android:textDirection="rtl"
+        android:textStyle="normal"
+        android:lines="1"
+        android:maxLines="4"
+        android:textColor="#202020"/>
+
+    <Button
+        android:id="@+id/btn_edit_send"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_edit_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/confirm"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_edit_cancel"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_edit_dialog"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

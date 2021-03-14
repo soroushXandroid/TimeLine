@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/contact_model_bg">
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/icon_user"/>
+
+    <TextView
+        android:id="@+id/chat_tv_contact_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سروش صابرزاده"
+        app:layout_constraintTop_toTopOf="@id/iv_user"
+        app:layout_constraintStart_toEndOf="@id/iv_user"
+        android:textDirection="rtl"
+        android:maxLines="1"
+        android:ems="7"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#F19603"/>
+
+    <TextView
+        android:id="@+id/tv_contact_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="93112232"
+        app:layout_constraintTop_toBottomOf="@id/chat_tv_contact_username"
+        app:layout_constraintStart_toStartOf="@id/chat_tv_contact_username"
+        app:layout_constraintEnd_toEndOf="@id/chat_tv_contact_username"
+        android:textDirection="rtl"
+        android:maxLines="1"
+        android:ems="7"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="#ED2828"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

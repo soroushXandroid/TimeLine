@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.mxn.soul.flowingdrawer_core.FlowingDrawer
+        android:id="@+id/public_drawer"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:edPosition="1"
+        app:edMenuSize="280dp"
+        android:background="#ffffff"
+        android:layout_height="match_parent"
+        tools:context="com.example.timeline.student.PublicActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/activity_public"/>
+
+        </LinearLayout>
+
+
+        <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+            android:id="@+id/public_drawer_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/public_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/nav_header_height"
+                        android:background="@drawable/side_nav_bar"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/civ_publicchat"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:contentDescription="@string/nav_header_desc"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:src="@drawable/icon_user" />
+
+                        <TextView
+                            android:id="@+id/tv_public_uersname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/civ_publicchat"
+                            app:layout_constraintStart_toStartOf="@id/civ_publicchat"
+                            app:layout_constraintEnd_toEndOf="@id/civ_publicchat"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/nav_header_vertical_spacing"
+                            android:textDirection="rtl"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/public_contact_linear"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/icon_contacts"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <TextView
+                            android:id="@+id/tv_public_contact"
+                            android:textSize="17sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/action_contact"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_margin="20dp"
+                        android:background="#2f2f2f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/public_favorite_linear"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/icon_heart_empty"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <TextView
+                            android:id="@+id/tv_public_fav"
+                            android:textSize="17sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/action_favorites"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_margin="20dp"
+                        android:background="#2f2f2f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/public_setting_linear"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/icon_setting"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <TextView
+                            android:id="@+id/tv_public_setting"
+                            android:textSize="17sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/action_settings"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="20dp"
+                        android:background="#2f2f2f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:id="@+id/public_search_linear"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/icon_search"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <TextView
+                            android:id="@+id/tv_public_search"
+                            android:textSize="17sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/action_search"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="20dp"
+                        android:background="#2f2f2f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:id="@+id/public_logout_linear"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/icon_logout"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <TextView
+                            android:id="@+id/tv_public_logout"
+                            android:textSize="17sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/action_logout"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/public_contact_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_public_back_contact"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_back"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="9dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/public_contact_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#09574D"
+                    android:padding="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+
+    </com.mxn.soul.flowingdrawer_core.FlowingDrawer>
+
+</LinearLayout>

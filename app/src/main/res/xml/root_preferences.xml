@@ -1,0 +1,37 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <ListPreference
+            app:defaultValue="nazanin"
+            app:entries="@array/font_entries"
+            app:entryValues="@array/font_values"
+            app:key="font-type"
+            app:title="@string/font_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:title="@string/font_size"
+            app:key="font-size"
+            android:defaultValue="18"
+            app:min="10"
+            android:max="40"
+            app:seekBarIncrement="@android:integer/config_longAnimTime"
+            app:showSeekBarValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:title="@string/theme_color"
+            app:key="theme"
+            android:summaryOff="@string/theme_dark"
+            android:summaryOn="@string/theme_light"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
